@@ -3,10 +3,13 @@ fn main() {
     println!("Comment of the commit: ");
     let stdin = std::io::stdin();
     let mut comment = String::new();
-    // process::Command::new("pwd").spawn().expect("Could not pwd");
 
-    stdin.read_line(&mut comment).unwrap();
+    match stdin.read_line(&mut comment) {
+        Ok(_) => {}
+        Err(e) => println!("Error: {}", e),
+    }
     commit_process(comment);
+
     push_process();
 }
 
@@ -22,8 +25,18 @@ fn commit_process(comment: String) {
 }
 
 fn push_process() {
-    process::Command::new("git")
-        .args(["commit", "push"])
-        .spawn()
-        .expect("Could not push");
+    let stdin = std::io::stdin();
+    let mut wanna_push = String::new();
+    println!("You want to push the commit? (y/n): ");
+    match stdin.read_line(&mut wanna_push) {
+        Ok(_) => {}
+        Err(e) => println!("Error: {}", e),
+    }
+
+    if wanna_push.to_uppercase() == "Y" {
+        process::Command::new("git")
+            .arg("push")
+            .spawn()
+            .expect("Could not push");
+    }
 }
