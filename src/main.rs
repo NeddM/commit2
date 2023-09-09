@@ -33,7 +33,7 @@ fn push_process() {
         Err(e) => println!("Error: {}", e),
     }
 
-    if wanna_push.to_uppercase() == "Y" {
+    if wanna_push.to_uppercase() == "Y".to_string() {
         process::Command::new("git")
             .arg("push")
             .spawn()
