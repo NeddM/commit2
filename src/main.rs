@@ -36,30 +36,22 @@ fn set_emoji() -> String {
         Ok(_) => {}
         Err(e) => println!("Error: {}", e),
     }
-    if option == "1".to_string() {
-        return "🚀".to_string();
-    } else if option == "2".to_string() {
-        return "📁".to_string();
-    } else if option == "3".to_string() {
-        return "🐛".to_string();
-    } else if option == "4".to_string() {
-        return "🎉".to_string();
-    } else if option == "5".to_string() {
-        return "🛠️".to_string();
-    } else if option == "6".to_string() {
-        return "⚡".to_string();
-    } else if option == "7".to_string() {
-        return "🔄".to_string();
-    } else if option == "8".to_string() {
-        return "📚".to_string();
-    } else if option == "9".to_string() {
-        return "🗑".to_string();
-    } else if option == "10".to_string() {
-        return "🌿".to_string();
-    } else if option == "11".to_string() {
-        return "⏪".to_string();
-    } else {
-        return "none".to_string();
+
+    option = option.trim().to_string();
+
+    match &option[..] {
+        "1" => "🚀".to_string(),
+        "2" => "📁".to_string(),
+        "3" => "🐛".to_string(),
+        "4" => "🎉".to_string(),
+        "5" => "🛠️".to_string(),
+        "6" => "⚡".to_string(),
+        "7" => "🔄".to_string(),
+        "8" => "📚".to_string(),
+        "9" => "🗑".to_string(),
+        "10" => "🌿".to_string(),
+        "11" => "⏪".to_string(),
+        _ => "😶".to_string(),
     }
 }
 
