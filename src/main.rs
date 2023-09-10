@@ -29,14 +29,14 @@ fn push_process() {
     let mut wanna_push = String::new();
     println!("You want to push the commit? (y/n): ");
     match stdin.read_line(&mut wanna_push) {
-        Ok(_) => {}
+        Ok(_) => {
+            if wanna_push.to_uppercase() == "Y".to_string() {
+                process::Command::new("git")
+                    .arg("push")
+                    .spawn()
+                    .expect("Could not push");
+            }
+        }
         Err(e) => println!("Error: {}", e),
-    }
-
-    if wanna_push.to_uppercase() == "Y".to_string() {
-        process::Command::new("git")
-            .arg("push")
-            .spawn()
-            .expect("Could not push");
     }
 }
