@@ -35,6 +35,8 @@ fn push_process() {
                     .arg("push")
                     .spawn()
                     .expect("Could not push");
+
+                println!("Everything pushed");
             }
         }
         Err(e) => println!("Error: {}", e),
