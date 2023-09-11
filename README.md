@@ -20,16 +20,18 @@ Follow these steps to use the "commit2" script:
 3. Compile the Rust script by running the following command:
 
 ```shell
-rustc commit2.rs
+cargo build --release
 ```
 
-4. Run the compiled executable:
+4. Save the exe on `System32` in Windows or `/usr/local/bin/` in Linux.
+
+5. Run the compiled executable:
 
 ```shell
-./commit2
+commit2
 ```
 
-5. Follow the on-screen prompts:
+6. Follow the on-screen prompts:
 
 -   You will be prompted to enter a comment for your commit.
 -   You will then be presented with a list of emojis to choose from. Enter the corresponding number to select an emoji for your commit.
