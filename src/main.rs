@@ -29,6 +29,7 @@ fn set_emoji() -> String {
     println!("9. 🗑️ file deletion");
     println!("10. 🌿 branch merging");
     println!("11. ⏪ revert commit");
+    println!("12. 🤖 github action");
 
     println!("Select option");
 
@@ -51,6 +52,7 @@ fn set_emoji() -> String {
         "9" => "🗑".to_string(),
         "10" => "🌿".to_string(),
         "11" => "⏪".to_string(),
+        "12" => "🤖".to_string(),
         _ => "😶".to_string(),
     }
 }
