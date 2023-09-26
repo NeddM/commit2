@@ -56,12 +56,17 @@ fn set_emoji() -> String {
 }
 
 fn commit_process(comment: String, emoji: String) {
-    let processed_comment = [emoji, comment].join(" ");
+    let capitalized = capitalize_first_letter(&comment);
+    let processed_comment = [emoji, capitalized].join(" ");
 
     process::Command::new("git")
         .args(["commit", "-m", &processed_comment])
         .spawn()
         .expect("Could not commit");
+}
+
+fn capitalize_first_letter(s: &str) -> String {
+    s[0..1].to_uppercase() + &s[1..]
 }
 
 fn main() {
