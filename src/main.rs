@@ -18,18 +18,21 @@ fn set_emoji() -> String {
     let mut option = String::new();
 
     println!("Select an emoji to your comment");
-    println!("1. 🚀 initial commit");
-    println!("2. 📁 add files");
-    println!("3. 🐛 bug fix");
-    println!("4. 🎉 feature implementation");
-    println!("5. 🛠️ refactoring");
-    println!("6. ⚡ performance optimization");
-    println!("7. 🔄 dependency updates");
-    println!("8. 📚 documentation");
-    println!("9. 🗑️ file deletion");
-    println!("10. 🌿 branch merging");
-    println!("11. ⏪ revert commit");
-    println!("12. 🤖 github action");
+    println!("1. 🚀 Initial commit");
+    println!("2. 📁 Add files");
+    println!("3. 🐛 Bug fix");
+    println!("4. 🎉 Feature implementation");
+    println!("5. 🛠️ Refactoring");
+    println!("6. ⚡ Performance optimization");
+    println!("7. 🔄 Dependency updates");
+    println!("8. 📚 Documentation");
+    println!("9. 🗑️ File deletion");
+    println!("10. 🌿 Branch merging");
+    println!("11. ⏪ Revert commit");
+    println!("12. 🤖 Github action");
+    println!("13. 🐋 Docker");
+    println!("14. ☸️ Kubernetes");
+    println!("15. 🏗️ Terraform");
 
     println!("Select option");
 
@@ -53,6 +56,9 @@ fn set_emoji() -> String {
         "10" => "🌿".to_string(),
         "11" => "⏪".to_string(),
         "12" => "🤖".to_string(),
+        "13" => "🐋".to_string(),
+        "14" => "☸️".to_string(),
+        "15" => "🏗️".to_string(),
         _ => "😶".to_string(),
     }
 }
