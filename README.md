@@ -52,5 +52,9 @@ The following emojis are available for your commit messages:
 9. 🗑️ file deletion
 10. 🌿 branch merging
 11. ⏪ revert commit
+12. 🤖 Github action
+13. 🐋 Docker
+14. ☸️ Kubernetes
+15. 🏗️ Terraform
 
 If you enter an invalid option, the script will use a default emoji (😶).
